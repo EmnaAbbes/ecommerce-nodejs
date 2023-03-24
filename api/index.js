@@ -25,10 +25,10 @@ app.get("/", (req, res) => {
 app.listen(process.env.PORT, () => {
     console.log(`Server is listening on port ${process.env.PORT}`);
 });
-const categorieRouter =require("./routes/categorie.route")
+const categorieRouter =require("../routes/categorie.route")
 app.use('/api/categories', categorieRouter);
-const scategorieRouter =require("./routes/scategorie.route")
+const scategorieRouter =require("../routes/scategorie.route")
 app.use('/api/scategories', scategorieRouter);
-const articleRouter =require("./routes/article.route")
+const articleRouter =require("../routes/article.route")
 app.use('/api/articles', articleRouter);
 module.exports = app;
